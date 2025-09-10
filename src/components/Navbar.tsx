@@ -35,14 +35,14 @@ export default function Navbar() {
         <div className="hidden md:flex px-4 space-x-2">
             {/* Conditional styling based on isActive */}
           <Link href="/projects" 
-            className={`hover:text-accent transition-colors`}>
+            className={`text-foreground hover:text-accent transition-colors`}>
             Projects
           </Link>
           <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
-            className={`hover:text-accent transition-colors`}>
+            className={`text-foreground hover:text-accent transition-colors`}>
             Resume
           </a>
-          <Link href="/art-extra" className={`hover:text-accent transition-colors`}>
+          <Link href="/art-extra" className={`text-foreground hover:text-accent transition-colors`}>
             Art/Extra
           </Link>
         </div>
@@ -62,18 +62,18 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div id="mobile-menu" className="md:hidden bg-background border-t border-foreground/10">
           <div className="px-4 py-2 space-y-2">
-            <Link href="/projects" className={`block py-2 hover:text-accent transition-colors`}>
+            <Link href="/projects" className={`block py-2 text-foreground hover:text-accent transition-colors`}>
             Projects
             </Link>
             <a
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="block py-2 hover:text-accent transition-colors"
+              className="block py-2 text-foreground hover:text-accent transition-colors"
             >
               Resume
             </a>
-            <Link href="/art-extra" className={`block py-2 hover:text-accent transition-colors`}>
+            <Link href="/art-extra" className={`block py-2 text-foreground hover:text-accent transition-colors`}>
               Art/Extra
             </Link>
           </div>
