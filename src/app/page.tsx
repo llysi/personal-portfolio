@@ -12,18 +12,12 @@ export default function Home() {
           height={38}
           priority
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+        <h1 className="text-4xl font-bold text-center">
+          Portfolio Front-end
+        </h1>
+        <p className="text-center text-lg">
+          Built with Next.js, TypeScript, and Tailwind CSS
+        </p>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
