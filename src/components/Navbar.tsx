@@ -1,51 +1,84 @@
 'use client'
 
 import Link from 'next/link'
-import {usePathname} from 'next/navigation'
+// import {usePathname} from 'next/navigation'
 import {useState} from 'react'
 
 export default function Navbar() {
 
-  const pathname = usePathname()
+  // const pathname = usePathname()
+
+  //Mobile Menu Panel [state, updater function]
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
+  /* 
   //Check if a link is active
   const isActive = (href: string) => {
     return pathname === href
+  } 
+  */
+
+  //Toggle hamburger
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
   return (
-    <nav className ="bg-background border-b border-foreground/10">
+    <nav className ="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-foreground/10">
       <div className="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className ="text-xl font-bold text-foreground">
-          Alysa Zhao
-        </Link>
-        
-        {/* TODO: Desktop Navigation - wrap your links in a div with hidden md:flex */}
-        {/* TODO: For each link, add conditional styling based on isActive */}
-        <Link href="/projects" className={isActive("/projects") ? "text-yellow-500" :
-  "text-foreground"}>
-          Projects
-        </Link>
-        <Link href="/resume" className={isActive("/resume") ? "text-yellow-500" :
-  "text-foreground"}>
-          Resume
-        </Link>
-        <Link href="/art-extra" className={isActive("/art-extra") ? "text-yellow-500" :
-  "text-foreground"}>
-          Art/Extra
+          Alysa Zhao  
         </Link>
 
-        {/* TODO: Mobile hamburger button - only show on mobile (md:hidden) */}
-        {/* TODO: Add onClick handler to toggle mobile menu */}
-        {/* TODO: Add ARIA attributes: aria-expanded, aria-controls, aria-label */}
+        {/* Links */}
+        <div className="hidden md:flex px-4 space-x-2">
+            {/* Conditional styling based on isActive */}
+          <Link href="/projects" 
+            className={`hover:text-accent transition-colors`}>
+            Projects
+          </Link>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
+            className={`hover:text-accent transition-colors`}>
+            Resume
+          </a>
+          <Link href="/art-extra" className={`hover:text-accent transition-colors`}>
+            Art/Extra
+          </Link>
+        </div>
+
+        {/* Hamburger button (only shows on mobile) */}
+        <button className="md:hidden" onClick={toggleMobileMenu}
+          aria-expanded={isMobileMenuOpen} aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+          <div className="w-6 h-6 flex flex-col justify-center space-y-1">
+            <span className="block w-full h-0.5 bg-foreground"></span>
+            <span className="block w-full h-0.5 bg-foreground"></span>
+            <span className="block w-full h-0.5 bg-foreground"></span>
+          </div>
+        </button>
       </div>
 
-      {/* TODO: Mobile menu - conditional rendering based on isOpen state */}
-      {/* TODO: Add proper ARIA attributes and semantic HTML */}
-      {/* TODO: Style with absolute positioning and smooth animations */}
-      
+      {/* Mobile menu panel*/}
+      {isMobileMenuOpen && (
+        <div id="mobile-menu" className="md:hidden bg-background border-t border-foreground/10">
+          <div className="px-4 py-2 space-y-2">
+            <Link href="/projects" className={`block py-2 hover:text-accent transition-colors`}>
+            Projects
+            </Link>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block py-2 hover:text-accent transition-colors"
+            >
+              Resume
+            </a>
+            <Link href="/art-extra" className={`block py-2 hover:text-accent transition-colors`}>
+              Art/Extra
+            </Link>
+          </div>
+        </div>
+      )}      
     </nav>
   )
 }
