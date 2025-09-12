@@ -25,14 +25,14 @@ export default function Navbar() {
 
   return (
     <nav className ="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-foreground/10">
-      <div className="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
+      <div className="px-4 h-18 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className ="text-xl font-bold text-foreground">
           Alysa Zhao  
         </Link>
 
         {/* Links */}
-        <div className="hidden md:flex px-4 space-x-2">
+        <div className="hidden md:flex space-x-8">
             {/* Conditional styling based on isActive */}
           <Link href="/projects" 
             className={`text-foreground hover:text-accent transition-colors`}>
