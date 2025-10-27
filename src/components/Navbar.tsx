@@ -1,8 +1,10 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 // import {usePathname} from 'next/navigation'
 import {useState} from 'react'
+
 
 export default function Navbar() {
 
@@ -26,9 +28,18 @@ export default function Navbar() {
   return (
     <nav className ="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-foreground/10">
       <div className="px-4 h-18 flex justify-between items-center">
+
         {/* Logo */}
-        <Link href="/" className ="text-xl font-bold text-foreground">
-          Alysa Zhao  
+        <Link href="/" className = "flex items-center gap-2">
+          <Image 
+            src = "/flower3.svg"
+            alt="Alysa Zhao"
+            width={40}
+            height={40}
+          />
+          <span className ="text-xl font-bold text-foreground">
+            Alysa Zhao  
+          </span>
         </Link>
 
         {/* Links */}

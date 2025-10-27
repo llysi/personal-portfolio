@@ -1,0 +1,17 @@
+import { projects } from '@/data/projects';
+import ProjectCard from '@/components/projects/ProjectCard';
+import ProjectGrid from '@/components/projects/ProjectGrid';
+
+export default function ProjectsPage() {
+    return (
+        <div className="min-h-screen py-16 px-4">
+            <div className="max-w-6xl mx-auto">
+                <h1 className="text-4xl font-bold text-center mb-12">
+                    Projects
+                </h1>
+
+                <ProjectGrid projects={projects} layout="single" />
+            </div>
+        </div>
+    );
+}
