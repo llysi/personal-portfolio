@@ -12,7 +12,7 @@ export default function Socials(){
             {/* Email Icon*/}
             <a
                 href="/contact" rel="noopener noreferrer"
-                className="pr-3 rounded-full border-0 border-foreground/20 text-foreground text-lg 
+                className="pr-3 rounded-full border-0 border-foreground/20 text-foregroundhue text-lg
                 font-semibold hover:text-accent hover:border-accent transition-colors"
             >
                 <svg width="42" height="42" viewBox="1 3 22 
@@ -27,7 +27,7 @@ export default function Socials(){
             {/* Github Icon*/}
             <a
                 href="https://github.com/llysi" target="_blank" rel="noopener noreferrer"
-                className="p-3 rounded-full border-0 border-foreground/20 text-foreground text-lg 
+                className="p-3 rounded-full border-0 border-foreground/20 text-foregroundhue text-lg
                 font-semibold hover:text-accent hover:border-accent transition-colors"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" 
@@ -39,7 +39,7 @@ export default function Socials(){
             {/* Linked Icon*/}
             <a
                 href="https://linkedin.com/in/alysaz" target="_blank" rel="noopener noreferrer"
-                className="p-3 rounded-full border-0 border-foreground/20 text-foreground text-lg 
+                className="p-3 rounded-full border-0 border-foreground/20 text-foregroundhue text-lg
                 font-semibold hover:text-accent hover:border-accent transition-colors"
             >
                 <svg width="36" height="36" 

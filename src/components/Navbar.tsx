@@ -26,35 +26,35 @@ export default function Navbar() {
   }
 
   return (
-    <nav className ="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-foreground/10">
-      <div className="px-4 h-18 flex justify-between items-center">
+    <nav className ="sticky top-0 z-50">
+      <div className="px-2 h-18 flex justify-between items-center font-light">
 
         {/* Logo */}
         <Link href="/" className = "flex items-center gap-2">
-          <Image 
+          {/*<Image 
             src = "/flower3.svg"
             alt="Alysa Zhao"
             width={40}
             height={40}
-          />
-          <span className ="text-xl font-bold text-foreground">
-            Alysa Zhao  
+          />*/}
+          <span className ="text-lg text-foreground hover:text-accent transition-colors font-heading">
+            ALYSA
           </span>
         </Link>
 
         {/* Links */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-8 font-heading">
             {/* Conditional styling based on isActive */}
           <Link href="/projects" 
             className={`text-foreground hover:text-accent transition-colors`}>
-            Projects
+            PROJECTS
           </Link>
           <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
             className={`text-foreground hover:text-accent transition-colors`}>
-            Resume
+            RESUME
           </a>
           <Link href="/art-extra" className={`text-foreground hover:text-accent transition-colors`}>
-            Art/Extra
+            ART+MORE
           </Link>
         </div>
 
