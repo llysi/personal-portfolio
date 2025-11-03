@@ -8,8 +8,8 @@
   --accentorange: #FC6031;
   --prettycolor: #1E1E1F;
   --skyblue2: #446ebc;
-  --skyblue1: #4596cd; /* main bg color */
-  --skyblue: #3b35ae;
+  --skyblue: #1d8881; /* main bg color */
+  --skyblue1: #3b35ae;
   --lightblue: #86bdd8;
 }
 
@@ -25,13 +25,15 @@
 @media (prefers-color-scheme: dark) {
   body {
       /*Dark mode gradient - different colors! */
-      background: linear-gradient(to bottom, #7b7bd5 60%, #0a0a0a);
+      /*background: linear-gradient(to bottom, #7b7bd5 60%, #0a0a0a);*/
+      background: var(--skyblue);
       color: #ffffff;
     }
 }
 
 body {
-  background: linear-gradient(to bottom, var(--skyblue) 60%, #3567ae);
+  /*background: linear-gradient(to bottom, var(--skyblue) 60%, #3567ae);*/
+  background: var(--skyblue);
   color: var(--foreground);
   font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
 }
