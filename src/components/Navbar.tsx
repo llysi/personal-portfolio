@@ -54,7 +54,7 @@ export default function Navbar() {
             RESUME
           </a>
           <Link href="/art-extra" className={`text-foreground hover:text-accent transition-colors`}>
-            ART+MORE
+            ART<span className={'italic'}>++</span>
           </Link>
         </div>
 
