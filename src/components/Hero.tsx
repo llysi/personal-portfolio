@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Socials from './Socials'
 import OceanWaves from './OceanWaves'
+import RotatingText from './RotatingText'
 
 export default function Hero() {
     return (
@@ -26,7 +27,16 @@ export default function Hero() {
                     Hi! I'm Alysa. I'm an aspiring software developer and I'm pursuing a B.S. in Computer Science with a minor in Math at Texas A&M University.
                     </p>
                     <p className="text-lg text-textcolor mb-6 max-w-xl">
-                        You can find me... ENGR-102 Teacher Assistant, designing merch for clubs, 
+                        You can find me{' '}
+                        <RotatingText
+                            phrases={[
+                                "teaching Python in ENGR-102",
+                                "designing merch for clubs",
+                                "coding late at night",
+                                "exploring new tech"
+                            ]}
+                            className="text-foreground font-medium"
+                        />
                     </p>
             </div>
 
