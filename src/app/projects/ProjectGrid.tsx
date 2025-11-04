@@ -117,10 +117,7 @@ export default function ProjectGrid({
                     <div
                         key={project.id}
                         ref={(el) => { cardRefs.current[index] = el }}
-                        className="snap-center transition-all duration-300"
-                        style={{
-                            transform: activeIndex === index ? 'scale(1.05)' : 'scale(1)'
-                        }}
+                        className="snap-center"
                     >
                         <ProjectCard
                             project={project}

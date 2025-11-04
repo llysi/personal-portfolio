@@ -14,10 +14,10 @@ export default function ProjectCard({project, className=""}: ProjectCardProps){
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <div className={`bg-card flex ${className}`}>
-            {/* Image container - Left side */}
+        <div className={`bg-card flex flex-col md:flex-row ${className}`}>
+            {/* Image container - Top on mobile, Left on desktop */}
             <div
-                className="w-96 h-60 flex-shrink-0 p-4"
+                className="w-full md:w-96 h-60 md:h-60 flex-shrink-0 p-4"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
@@ -45,8 +45,8 @@ export default function ProjectCard({project, className=""}: ProjectCardProps){
                 </div>
             </div>
 
-            {/* Content container - Right side */}
-            <div className="flex-1 p-8 flex flex-col justify-between">
+            {/* Content container - Bottom on mobile, Right on desktop */}
+            <div className="flex-1 p-4 md:p-8 flex flex-col justify-between">
                 <div>
                     <h3 className="text-2xl font-light mb-3 text-foreground font-heading">
                         {project.title}

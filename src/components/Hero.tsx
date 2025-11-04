@@ -3,12 +3,12 @@ import RotatingText from './RotatingText'
 
 export default function Hero() {
     return (
-        <section className="flex items-start justify-start px-4 pt-32" style={{ minHeight: 'calc(100vh - 128px)' }}>
+        <section className="flex items-start justify-start pt-32" style={{ minHeight: 'calc(100vh - 128px)' }}>
         {/* TODO: Add background gradient */}
 
-        <div className="text-left space-y-8">
+        <div className="text-left space-y-8 w-full">
             {/* Name - Large heading */}
-            <h1 className="text-5xl md:text-7xl text-foreground font-heading">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl text-foreground font-heading break-words">
                 Alysa Zhao
             </h1>
 
@@ -20,11 +20,11 @@ export default function Hero() {
               {/* Bio Section - ADD THIS */}
                 <div className="pt-0 text-left">
                     {/* Professional Summary */}
-                    <p className="text-base md:text-lg text-textcolor mb-6 max-w-xl ">
+                    <p className="text-base md:text-lg text-textcolor mb-6 max-w-full md:max-w-xl">
                     Hi! I&apos;m Alysa. I&apos;m pursuing a B.S. in Computer Science with a minor in Math at Texas A&M University.
                     I love building creative and functional software, and hope to make the world a little cooler with it.
                     </p>
-                    <p className="text-base md:text-lg text-textcolor mb-6 max-w-2xl">
+                    <p className="text-base md:text-lg text-textcolor mb-6 max-w-full md:max-w-2xl">
                         You can find me{' '}
                         <RotatingText
                             phrases={[

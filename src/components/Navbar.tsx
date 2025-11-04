@@ -2,16 +2,21 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-// import {usePathname} from 'next/navigation'
-import {useState} from 'react'
+import {usePathname} from 'next/navigation'
+import {useState, useEffect} from 'react'
 
 
 export default function Navbar() {
 
-  // const pathname = usePathname()
+  const pathname = usePathname()
 
   //Mobile Menu Panel [state, updater function]
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  // Close menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false)
+  }, [pathname])
 
   /*
   //Check if a link is active
@@ -73,8 +78,8 @@ export default function Navbar() {
       <div
         id="mobile-menu"
         style={{ backgroundColor: '#f9f7f7' }}
-        className={`md:hidden border-t border-foreground/10 absolute left-0 right-0 z-40 font-heading transition-all duration-500 ease-in-out overflow-hidden ${
-          isMobileMenuOpen ? 'max-h-60' : 'max-h-0'
+        className={`md:hidden border-t border-foreground/10 absolute left-0 right-0 z-40 font-heading overflow-hidden ${
+          isMobileMenuOpen ? 'max-h-60 transition-all duration-500 ease-in-out' : 'max-h-0'
         }`}
       >
           <div className="px-4 py-2 space-y-2">

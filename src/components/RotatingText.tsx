@@ -40,10 +40,10 @@ export default function RotatingText({
     return (
         //window positioned to align with text baseline
         <span
-            className={`inline-block overflow-hidden ${className}`}
+            className={`inline-block overflow-hidden max-w-full ${className}`}
             style={{
                 height: `${PHRASE_HEIGHT}px`,
-                verticalAlign: 'baseline', 
+                verticalAlign: 'baseline',
                 position: 'relative',
                 top: '8px'  //push down to align better
             }}
@@ -60,7 +60,7 @@ export default function RotatingText({
                 {phrases.map((phrase, index) => (
                     <span
                         key={index}
-                        className="block whitespace-nowrap"
+                        className="block whitespace-nowrap overflow-hidden text-ellipsis"
                         style={{ height: `${PHRASE_HEIGHT}px`, lineHeight: `${PHRASE_HEIGHT}px` }}
                     >
                         {phrase}
@@ -68,7 +68,7 @@ export default function RotatingText({
                 ))}
                 {/* duplicate first phrase at the end for seamless loop */}
                 <span
-                    className="block whitespace-nowrap"
+                    className="block whitespace-nowrap overflow-hidden text-ellipsis"
                     style={{ height: `${PHRASE_HEIGHT}px`, lineHeight: `${PHRASE_HEIGHT}px` }}
                 >
                     {phrases[0]}
