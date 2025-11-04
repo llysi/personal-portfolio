@@ -26,13 +26,13 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="sticky top-0 z-50 bg-background">
+    <nav className="top-0 z-50 bg-background relative">
       <div className="px-2 h-18 flex justify-between items-center font-light">
 
         {/* Logo */}
         <Link href="/" className = "flex items-center gap-2">
           {<Image 
-            src = "/logo_sq.svg"
+            src = "/logo_bwt.svg"
             alt="Alysa Zhao"
             width={28}
             height={28}
@@ -72,8 +72,9 @@ export default function Navbar() {
       {/* Mobile menu panel*/}
       <div
         id="mobile-menu"
-        className={`md:hidden bg-background border-t border-foreground/10 absolute left-0 right-0 font-heading transition-all duration-500 ease-in-out overflow-hidden ${
-          isMobileMenuOpen ? 'max-h-48' : 'max-h-0'
+        style={{ backgroundColor: '#f9f7f7' }}
+        className={`md:hidden border-t border-foreground/10 absolute left-0 right-0 z-40 font-heading transition-all duration-500 ease-in-out overflow-hidden ${
+          isMobileMenuOpen ? 'max-h-60' : 'max-h-0'
         }`}
       >
           <div className="px-4 py-2 space-y-2">

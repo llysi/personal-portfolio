@@ -1,17 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  --background: var(--skyblue);
-  --foreground: #c71d69;
-  --foregroundhue: #d84381;
-  --textcolor: #292727;
-  --beige: #faf4ed;
-  --accentpink: #c51665;
-  --accentyellow: #fcb82f;
+  --background: #f9f7f7;
+  --foreground: #452526;
+  --foregroundhue: #432323;
+  --textcolor: #030303;
+  --accent: #81acde;
+  --accentblue: #7ca4c5;
+
+  /* Professional looking */
+  --background1: #e8e8e8;
+  --foreground1: #1f2c2e;
+  --foregroundhue1: #1f2c2e;
+  --textcolor1: #202121;
+  --accent1: #edc26b;
+
+  --foreground2: #c71d69;
+  --foregroundhue2: #d84381;
+  --background2: #faf4ed;
+  --textcolor2: #292727;
+  --accent2: #fcb82f;
+
+  --background3: #282c3c;
+  --foreground3: #e4a8a8;
+  --foregroundhue3: #eeeeee;
+  --textcolor3: #eeeeee;
+
+  --gray: #d1cac5;
+  --accentpink: #c71d69;
   --accentorange: #fcb82f;
   --prettycolor: #1E1E1F;
   --skyblue2: #446ebc;
-  --skyblue: #12b4a9;; /* main bg color */
+  --skyblue: #1279b4;; /* main bg color */
   --skyblue1: #3b35ae;
   --lightblue: #86bdd8;
 }
@@ -21,7 +41,8 @@
   --color-foreground: var(--foreground);
   --color-foregroundhue: var(--foregroundhue);
   --color-textcolor: var(--textcolor);
-  --color-accent: var(--accentyellow);
+  --color-accent: var(--accent);
+  --color-gray: var(--gray);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: 'Momo Trust Display', sans-serif;
@@ -64,7 +85,7 @@
 
 body {
   /*background: linear-gradient(to bottom, var(--skyblue) 60%, #3567ae);*/
-  background: var(--beige);
+  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
   margin: 0;

@@ -5,7 +5,7 @@ import Socials from '@/components/Socials';
 
 export default function ProjectsPage() {
     return (
-        <div className="min-h-screen pt-16 pb-16 px-4">
+        <div className="min-h-screen pt-12 pb-52 px-4">
             <div className="max-w-5xl mx-auto">
                 <div className="mb-12">
                     <h1 className="text-6xl font-light font-heading text-foreground mb-2">

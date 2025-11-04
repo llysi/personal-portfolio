@@ -8,6 +8,7 @@ export interface Project {
     githubUrl?: string;
     liveUrl?: string;
     featured?: boolean; //highlighting special projects
+    showGithub?: boolean;
 }
 export const projects: Project[] = [
     {
@@ -17,9 +18,10 @@ export const projects: Project[] = [
         image: "/projects/launchpad_title.png",
         hoverImage: "/projects/launchpad_content.png",
         technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-        githubUrl: "https://github.com/llysi/personal-portfolio",
+        githubUrl: "https://github.com/llysi/howdyhack-25",
         liveUrl: "https://example.com/",
-        featured: true
+        featured: true,
+        showGithub: true,
     },
     {
         id: "2",

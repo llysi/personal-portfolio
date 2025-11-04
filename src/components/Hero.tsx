@@ -38,7 +38,7 @@ export default function Hero() {
                                 "revamping websites for student orgs.",
                                 "baking desserts for friends.",
                             ]}
-                            className="text-foreground font-medium"
+                            className="text-accent font-semibold"
                         />
                     </p>
             </div>
