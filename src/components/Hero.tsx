@@ -25,16 +25,18 @@ export default function Hero() {
                     {/* Professional Summary */}
                     <p className="text-lg text-textcolor mb-6 max-w-xl ">
                     Hi! I'm Alysa. I'm pursuing a B.S. in Computer Science with a minor in Math at Texas A&M University. 
-                    I have a passion for creative and functional software, and hope to make the world a little cooler with it.
+                    I love building creative and functional software, and hope to make the world a little cooler with it.
                     </p>
-                    <p className="text-lg text-textcolor mb-6 max-w-xl">
+                    <p className="text-lg text-textcolor mb-6 max-w-2xl">
                         You can find me{' '}
                         <RotatingText
                             phrases={[
-                                "teaching Python in ENGR-102",
-                                "designing merch for clubs",
-                                "coding late at night",
-                                "exploring new tech"
+                                "debugging spaghetti as a Teacher Assistant.",
+                                "designing merch for student orgs.",
+                                "pulling all nighters (and repos) at hackathons.",
+                                "learning k-pop dances with Royal Aces Dance Crew.",
+                                "revamping websites for student orgs.",
+                                "baking desserts for friends.",
                             ]}
                             className="text-foreground font-medium"
                         />

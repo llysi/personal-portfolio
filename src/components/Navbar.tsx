@@ -31,12 +31,12 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" className = "flex items-center gap-2">
-          {/*<Image 
-            src = "/flower3.svg"
+          {<Image 
+            src = "/logo_sq.svg"
             alt="Alysa Zhao"
-            width={40}
-            height={40}
-          />*/}
+            width={28}
+            height={28}
+          />}
           <span className="text-lg text-foreground hover:text-accent transition-colors font-heading">
             ALYSA
           </span>
