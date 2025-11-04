@@ -25,7 +25,7 @@ export const projects: Project[] = [
         id: "2",
         title: "Project 2",
         description: `WIP yoyoyo blah blah babaganoush hihihisdahfewughajdsuvfgywehujdsguf some descriptive text`,
-        image: "/projects/portfolio.jpg",
+        image: "/projects/tidal.png",
         technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
         githubUrl: "https://github.com/llysi/personal-portfolio",
         liveUrl: "https://alysazhao.com",

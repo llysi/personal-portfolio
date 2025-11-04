@@ -53,20 +53,20 @@ export default function ProjectGrid({
     const getLayoutClasses = () => {
         switch (layout) {
             case 'single':
-                return `flex flex-col gap-8 max-w-3xl mx-auto`;
+                return `flex flex-col gap-16 max-w-3xl mx-auto`;
             case 'grid':
                 return `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6`;
             case 'masonry':
                 return `columns-1 md:columns-2 lg:columns-3 gap-6`;
             default:
-                return `flex flex-col gap-8 max-w-4xl mx-auto`;
+                return `flex flex-col gap-16 max-w-4xl mx-auto`;
         }
     };
 
     return (
         <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-foreground/30"></div>
+            {/*<div className="absolute left-0 top-0 bottom-0 w-px bg-foregroundhue/50"></div>(/})
 
             {/* Timeline sparkles */}
             {projects.map((project, index) => (
@@ -74,8 +74,10 @@ export default function ProjectGrid({
                     key={`diamond-${project.id}`}
                     className="absolute -left-[10px] z-10 transition-all duration-300"
                     style={{
-                        top: `${index * (288 + 32) + 135}px`,
-                        filter: activeIndex === index ? 'drop-shadow(0 0 3px currentColor)' : 'none'
+                        top: `${index * (288 + 64) + 135}px`,
+                        filter: activeIndex === index ? 'drop-shadow(0 0 1px currentColor) drop-shadow(0 0 1px currentColor)' : 'none',
+                        transform: activeIndex === index ? 'scale(1.5)' : 'scale(1)',
+                        opacity: activeIndex === index ? 1 : 1
                     }}
                     width="22"
                     height="22"
@@ -83,7 +85,7 @@ export default function ProjectGrid({
                     fill="currentColor"
                 >
                     <path
-                        className={activeIndex === index ? 'text-white' : 'text-foreground'}
+                        className={activeIndex === index ? 'text-white' : 'text-foregroundhue'}
                         d="M12 1L15 9L15 12L15 15L12 23L9 15L9 12L9 9L12 1ZM15 9L23 12L15 15ZM9 9L1 12L9 15Z"
                     />
                 </svg>
@@ -91,7 +93,14 @@ export default function ProjectGrid({
 
             <div className = {`${getLayoutClasses()} ${className}`}>
                 {projects.map((project, index) => (
-                    <div key={project.id} ref={(el) => (cardRefs.current[index] = el)}>
+                    <div
+                        key={project.id}
+                        ref={(el) => (cardRefs.current[index] = el)}
+                        className="snap-center transition-all duration-300"
+                        style={{
+                            transform: activeIndex === index ? 'scale(1.05)' : 'scale(1)'
+                        }}
+                    >
                         <ProjectCard
                             project={project}
                         />
