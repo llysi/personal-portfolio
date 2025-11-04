@@ -1,5 +1,8 @@
+'use client'
+
 import { Project } from '@/app/projects/projects';
 import ProjectCard from './ProjectCard';
+import { useState, useEffect, useRef } from 'react';
 
 interface ProjectGridProps {
     projects: Project[];
@@ -12,7 +15,41 @@ export default function ProjectGrid({
     layout='single',
     className = ""
 }: ProjectGridProps) {
-    
+    const [activeIndex, setActiveIndex] = useState<number>(0);
+    const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const viewportCenter = window.innerHeight / 2 + window.scrollY;
+            let closestIndex = 0;
+            let closestDistance = Infinity;
+
+            cardRefs.current.forEach((card, index) => {
+                if (!card) return;
+
+                const rect = card.getBoundingClientRect();
+                const cardCenter = rect.top + window.scrollY + rect.height / 2;
+                const distance = Math.abs(cardCenter - viewportCenter);
+
+                if (distance < closestDistance) {
+                    closestDistance = distance;
+                    closestIndex = index;
+                }
+            });
+
+            setActiveIndex(closestIndex);
+        };
+
+        // Delay initial check to ensure refs are populated
+        setTimeout(handleScroll, 100);
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleScroll);
+        };
+    }, [projects]);
+
     const getLayoutClasses = () => {
         switch (layout) {
             case 'single':
@@ -27,13 +64,40 @@ export default function ProjectGrid({
     };
 
     return (
-        <div className = {`${getLayoutClasses()} ${className}`}>
-            {projects.map(project => (
-                <ProjectCard
-                    key={project.id}
-                    project={project}
-                />
+        <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-foreground/30"></div>
+
+            {/* Timeline sparkles */}
+            {projects.map((project, index) => (
+                <svg
+                    key={`diamond-${project.id}`}
+                    className="absolute -left-[10px] z-10 transition-all duration-300"
+                    style={{
+                        top: `${index * (288 + 32) + 135}px`,
+                        filter: activeIndex === index ? 'drop-shadow(0 0 3px currentColor)' : 'none'
+                    }}
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                >
+                    <path
+                        className={activeIndex === index ? 'text-white' : 'text-foreground'}
+                        d="M12 1L15 9L15 12L15 15L12 23L9 15L9 12L9 9L12 1ZM15 9L23 12L15 15ZM9 9L1 12L9 15Z"
+                    />
+                </svg>
             ))}
+
+            <div className = {`${getLayoutClasses()} ${className}`}>
+                {projects.map((project, index) => (
+                    <div key={project.id} ref={(el) => (cardRefs.current[index] = el)}>
+                        <ProjectCard
+                            project={project}
+                        />
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }

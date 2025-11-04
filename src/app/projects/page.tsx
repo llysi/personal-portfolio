@@ -16,7 +16,9 @@ export default function ProjectsPage() {
                     </div>*/}
                 </div>
 
-                <ProjectGrid projects={projects} layout="single" />
+                <div className="pl-12 ml-8">
+                    <ProjectGrid projects={projects} layout="single" />
+                </div>
             </div>
         </div>
     );
