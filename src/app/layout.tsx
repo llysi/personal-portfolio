@@ -38,7 +38,8 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet" />
       </head>
       <body
-        className={`${poppins.variable} antialiased`}>
+        className={`${poppins.variable} antialiased`}
+        suppressHydrationWarning>
           <div className="max-w-5xl mx-auto px-4">
           <Navbar />
           <main>
