@@ -84,7 +84,7 @@ export default function ArtPage() {
     return (
         <div className="min-h-screen pt-12 pb-24 px-4">
             <div className="max-w-6xl mx-auto">
-                <h1 className="text-4xl md:text-6xl font-light font-heading text-foreground mb-12">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-light font-heading text-foreground mb-12">
                     ART<span className="italic">++</span>
                 </h1>
 
