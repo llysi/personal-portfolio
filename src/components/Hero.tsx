@@ -1,7 +1,4 @@
-import Link from 'next/link'
-import Image from 'next/image'
 import Socials from './Socials'
-import OceanWaves from './OceanWaves'
 import RotatingText from './RotatingText'
 
 export default function Hero() {
@@ -24,7 +21,7 @@ export default function Hero() {
                 <div className="pt-0 text-left">
                     {/* Professional Summary */}
                     <p className="text-base md:text-lg text-textcolor mb-6 max-w-xl ">
-                    Hi! I'm Alysa. I'm pursuing a B.S. in Computer Science with a minor in Math at Texas A&M University.
+                    Hi! I&apos;m Alysa. I&apos;m pursuing a B.S. in Computer Science with a minor in Math at Texas A&M University.
                     I love building creative and functional software, and hope to make the world a little cooler with it.
                     </p>
                     <p className="text-base md:text-lg text-textcolor mb-6 max-w-2xl">
