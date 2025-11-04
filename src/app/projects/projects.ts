@@ -3,6 +3,7 @@ export interface Project {
     title: string;
     description: string;
     image: string;
+    hoverImage?: string;
     technologies: string[];
     githubUrl?: string;
     liveUrl?: string;
@@ -11,9 +12,10 @@ export interface Project {
 export const projects: Project[] = [
     {
         id: "1",
-        title: "Project!",
+        title: "Launchpad",
         description: `WIP yoyoyo blah blah babaganoush hihihisdahfewughajdsuvfgywehujdsguf some descriptive text`,
-        image: "/projects/portfolio.jpg",
+        image: "/projects/launchpad_title.png",
+        hoverImage: "/projects/launchpad_content.png",
         technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
         githubUrl: "https://github.com/llysi/personal-portfolio",
         liveUrl: "https://example.com/",

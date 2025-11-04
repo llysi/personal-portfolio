@@ -1,5 +1,8 @@
+'use client'
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import { Project } from '@/app/projects/projects';
 
 interface ProjectCardProps {
@@ -8,17 +11,39 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({project, className=""}: ProjectCardProps){
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
-        <div className={`bg-card rounded-lg shadow-md overflow-hidden 
+        <div className={`bg-card rounded-lg shadow-md overflow-hidden
         hover:shadow-lg transition-shadow flex ${className}`}>
             {/* Image container - Left side */}
-            <div className="relative w-80 h-60 flex-shrink-0">
-                <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover"
-                />
+            <div
+                className="w-90 h-60 flex-shrink-0 p-4"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+            >
+                <div className="relative w-full h-full bg-white overflow-hidden flex items-center justify-center">
+                    {/* Base image */}
+                    <Image
+                        src={project.image}
+                        alt={project.title}
+                        width={500}
+                        height={500}
+                        className="h-full w-auto object-cover"
+                    />
+                    {/* Hover image - fades in on top */}
+                    {project.hoverImage && (
+                        <Image
+                            src={project.hoverImage}
+                            alt={project.title}
+                            width={500}
+                            height={500}
+                            className={`absolute inset-0 m-auto h-full w-auto object-cover transition-opacity duration-300 ${
+                                isHovered ? 'opacity-100' : 'opacity-0'
+                            }`}
+                        />
+                    )}
+                </div>
             </div>
 
             {/* Content container - Right side */}
