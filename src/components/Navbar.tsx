@@ -30,6 +30,11 @@ export default function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
+  //Close mobile menu
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false)
+  }
+
   return (
     <nav className="top-0 z-50 bg-background relative">
       <div className="px-2 h-18 flex justify-between items-center font-light">
@@ -79,23 +84,24 @@ export default function Navbar() {
         id="mobile-menu"
         style={{ backgroundColor: '#f9f7f7' }}
         className={`md:hidden border-t border-foreground/10 absolute left-0 right-0 z-40 font-heading overflow-hidden ${
-          isMobileMenuOpen ? 'max-h-60 transition-all duration-500 ease-in-out' : 'max-h-0'
+          isMobileMenuOpen ? 'max-h-60 transition-all duration-500 ease-in-out' : 'max-h-0 transition-none'
         }`}
       >
           <div className="px-4 py-2 space-y-2">
-            <Link href="/projects" className={`block py-2 text-foreground hover:text-accent transition-colors`}>
-            Projects
+            <Link href="/projects" className={`block py-2 text-foreground hover:text-accent transition-colors`} onClick={closeMobileMenu}>
+            PROJECTS
             </Link>
             <a
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="block py-2 text-foreground hover:text-accent transition-colors"
+              onClick={closeMobileMenu}
             >
-              Resume
+              RESUME
             </a>
-            <Link href="/art-extra" className={`block py-2 text-foreground hover:text-accent transition-colors`}>
-              Art/Extra
+            <Link href="/art-extra" className={`block py-2 text-foreground hover:text-accent transition-colors`} onClick={closeMobileMenu}>
+              ART++
             </Link>
           </div>
         </div>      
