@@ -5,15 +5,15 @@ import Socials from '@/components/Socials';
 
 export default function ProjectsPage() {
     return (
-        <div className="min-h-screen py-16 px-4">
-            <div className="max-w-6xl mx-auto">
+        <div className="min-h-screen pt-16 pb-16 px-4">
+            <div className="max-w-5xl mx-auto">
                 <div className="mb-12">
-                    <h1 className="text-4xl font-light font-heading text-foreground mb-4">
+                    <h1 className="text-6xl font-light font-heading text-foreground mb-2">
                         PROJECTS
                     </h1>
-                    <div className="scale-75 origin-left">
-                        <Socials stacked={false} />
-                    </div>
+                    {/*<div className="scale-75 origin-left mb--2">
+                        <Socials></Socials>
+                    </div>*/}
                 </div>
 
                 <ProjectGrid projects={projects} layout="single" />

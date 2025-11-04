@@ -12,7 +12,7 @@ export interface Project {
 export const projects: Project[] = [
     {
         id: "1",
-        title: "Launchpad",
+        title: "Launch Pad",
         description: `WIP yoyoyo blah blah babaganoush hihihisdahfewughajdsuvfgywehujdsguf some descriptive text`,
         image: "/projects/launchpad_title.png",
         hoverImage: "/projects/launchpad_content.png",
