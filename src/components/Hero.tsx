@@ -23,11 +23,11 @@ export default function Hero() {
               {/* Bio Section - ADD THIS */}
                 <div className="pt-0 text-left">
                     {/* Professional Summary */}
-                    <p className="text-lg text-textcolor mb-6 max-w-xl ">
-                    Hi! I'm Alysa. I'm pursuing a B.S. in Computer Science with a minor in Math at Texas A&M University. 
+                    <p className="text-base md:text-lg text-textcolor mb-6 max-w-xl ">
+                    Hi! I'm Alysa. I'm pursuing a B.S. in Computer Science with a minor in Math at Texas A&M University.
                     I love building creative and functional software, and hope to make the world a little cooler with it.
                     </p>
-                    <p className="text-lg text-textcolor mb-6 max-w-2xl">
+                    <p className="text-base md:text-lg text-textcolor mb-6 max-w-2xl">
                         You can find me{' '}
                         <RotatingText
                             phrases={[
