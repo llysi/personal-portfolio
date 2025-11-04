@@ -26,7 +26,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className ="sticky top-0 z-50">
+    <nav className="sticky top-0 z-50">
       <div className="px-2 h-18 flex justify-between items-center font-light">
 
         {/* Logo */}
@@ -37,7 +37,7 @@ export default function Navbar() {
             width={40}
             height={40}
           />*/}
-          <span className ="text-lg text-foreground hover:text-accent transition-colors font-heading">
+          <span className="text-lg text-foreground hover:text-accent transition-colors font-heading">
             ALYSA
           </span>
         </Link>
@@ -71,7 +71,7 @@ export default function Navbar() {
 
       {/* Mobile menu panel*/}
       {isMobileMenuOpen && (
-        <div id="mobile-menu" className="md:hidden bg-background border-t border-foreground/10">
+        <div id="mobile-menu" className="md:hidden bg-background border-t border-foreground/10 absolute left-0 right-0 font-heading">
           <div className="px-4 py-2 space-y-2">
             <Link href="/projects" className={`block py-2 text-foreground hover:text-accent transition-colors`}>
             Projects
