@@ -14,7 +14,9 @@ export const projects: Project[] = [
     {
         id: "1",
         title: "Launch Pad",
-        description: `WIP yoyoyo blah blah babaganoush hihihisdahfewughajdsuvfgywehujdsguf some descriptive text`,
+        description: `A learning app that leverages Google’s Gemini API to analyze resumes, 
+                identify skill gaps, and generate personalized study roadmaps with 
+                automated scheduling and data visualization.`,
         image: "/projects/launchpad_title.png",
         hoverImage: "/projects/launchpad_content.png",
         technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
@@ -26,7 +28,7 @@ export const projects: Project[] = [
     {
         id: "2",
         title: "Project 2",
-        description: `WIP yoyoyo blah blah babaganoush hihihisdahfewughajdsuvfgywehujdsguf some descriptive text`,
+        description: `WIP`,
         image: "/projects/tidal.png",
         technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
         githubUrl: "https://github.com/llysi/personal-portfolio",
@@ -36,7 +38,7 @@ export const projects: Project[] = [
     {
         id: "3",
         title: "Project 3",
-        description: `WIP yoyoyo blah blah babaganoush hihihisdahfewughajdsuvfgywehujdsguf some descriptive text`,
+        description: `WIP`,
         image: "/projects/portfolio.jpg",
         technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
         githubUrl: "https://github.com/llysi/personal-portfolio",
