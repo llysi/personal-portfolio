@@ -12,6 +12,7 @@ export default function Navbar() {
 
   //Mobile Menu Panel [state, updater function]
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [shouldAnimate, setShouldAnimate] = useState(true)
 
   // Close menu when route changes
   useEffect(() => {
@@ -25,13 +26,15 @@ export default function Navbar() {
   }
   */
 
-  //Toggle hamburger
+  //Toggle hamburger (with animation)
   const toggleMobileMenu = () => {
+    setShouldAnimate(true)
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
-  //Close mobile menu
+  //Close mobile menu instantly (for link clicks)
   const closeMobileMenu = () => {
+    setShouldAnimate(false)
     setIsMobileMenuOpen(false)
   }
 
@@ -84,7 +87,11 @@ export default function Navbar() {
         id="mobile-menu"
         style={{ backgroundColor: '#f9f7f7' }}
         className={`md:hidden border-t border-foreground/10 absolute left-0 right-0 z-40 font-heading overflow-hidden ${
-          isMobileMenuOpen ? 'max-h-60 transition-all duration-500 ease-in-out' : 'max-h-0 transition-none'
+          isMobileMenuOpen
+            ? 'max-h-60 transition-all duration-500 ease-in-out'
+            : shouldAnimate
+              ? 'max-h-0 transition-all duration-500 ease-in-out'
+              : 'max-h-0 transition-none'
         }`}
       >
           <div className="px-4 py-2 space-y-2">
