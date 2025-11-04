@@ -1,6 +1,6 @@
 export default function Socials(){
     return (
-        <div className="pt-0 flex items-center justify-start gap-2">
+        <div className="pt-0 flex items-center justify-start gap-0">
             {/* CTA Button 
             <Link href="/contact"
             className="bg-foreground/10 text-foreground px-8 py-3 rounded-full border-2 border-foreground/0 text-lg 
