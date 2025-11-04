@@ -14,13 +14,26 @@ export default function RotatingText({
     interval = 3000
 }: RotatingTextProps) {
     const [currentIndex, setCurrentIndex] = useState(0)
+    const [isTransitioning, setIsTransitioning] = useState(true)
 
     useEffect(() => {
         const timer = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % phrases.length)
+            setIsTransitioning(true)
+            setCurrentIndex((prevIndex) => prevIndex + 1)
         }, interval)
         return () => clearInterval(timer)
-    }, [phrases.length, interval])
+    }, [interval])
+
+    // When we reach the duplicate (end), instantly jump back to start
+    useEffect(() => {
+        if (currentIndex === phrases.length) {
+            setTimeout(() => {
+                setIsTransitioning(false)  // Turn off transition
+                setCurrentIndex(0)  // Jump to start instantly
+                setTimeout(() => setIsTransitioning(true), 50)  // Turn transition back on
+            }, 700)  // Wait for the scroll animation to finish
+        }
+    }, [currentIndex, phrases.length])
 
     const PHRASE_HEIGHT = 28
 
@@ -32,7 +45,7 @@ export default function RotatingText({
                 height: `${PHRASE_HEIGHT}px`,
                 verticalAlign: 'baseline', 
                 position: 'relative',
-                top: '8px'  //push down to alig better
+                top: '8px'  //push down to align better
             }}
         >
             {/* Moving strip */}
@@ -40,10 +53,10 @@ export default function RotatingText({
                 className="block"
                 style={{
                     transform: `translateY(-${currentIndex * PHRASE_HEIGHT}px)`,
-                    transition: 'transform 0.7s ease-in-out'
+                    transition: isTransitioning ? 'transform 0.7s ease-in-out' : 'none'
                 }}
             >
-                {/* All phrases stacked (each 24px) */}
+                {/* all phrases stacked */}
                 {phrases.map((phrase, index) => (
                     <span
                         key={index}
@@ -53,6 +66,13 @@ export default function RotatingText({
                         {phrase}
                     </span>
                 ))}
+                {/* duplicate first phrase at the end for seamless loop */}
+                <span
+                    className="block whitespace-nowrap"
+                    style={{ height: `${PHRASE_HEIGHT}px`, lineHeight: `${PHRASE_HEIGHT}px` }}
+                >
+                    {phrases[0]}
+                </span>
             </span>
         </span>
     )

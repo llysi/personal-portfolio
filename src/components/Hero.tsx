@@ -24,7 +24,8 @@ export default function Hero() {
                 <div className="pt-0 text-left">
                     {/* Professional Summary */}
                     <p className="text-lg text-textcolor mb-6 max-w-xl ">
-                    Hi! I'm Alysa. I'm an aspiring software developer and I'm pursuing a B.S. in Computer Science with a minor in Math at Texas A&M University.
+                    Hi! I'm Alysa. I'm pursuing a B.S. in Computer Science with a minor in Math at Texas A&M University. 
+                    I have a passion for creative and functional software, and hope to make the world a little cooler with it.
                     </p>
                     <p className="text-lg text-textcolor mb-6 max-w-xl">
                         You can find me{' '}

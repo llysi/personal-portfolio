@@ -17,7 +17,7 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
+  --color-background: var(--beige);
   --color-foreground: var(--foreground);
   --color-foregroundhue: var(--foregroundhue);
   --color-textcolor: var(--textcolor);
