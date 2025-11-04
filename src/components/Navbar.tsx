@@ -59,7 +59,7 @@ export default function Navbar() {
         </div>
 
         {/* Hamburger button (only shows on mobile) */}
-        <button className="md:hidden" onClick={toggleMobileMenu}
+        <button className="md:hidden cursor-pointer" onClick={toggleMobileMenu}
           aria-expanded={isMobileMenuOpen} aria-controls="mobile-menu" aria-label="Toggle navigation menu">
           <div className="w-6 h-6 flex flex-col justify-center space-y-1">
             <span className="block w-full h-0.5 bg-foreground"></span>
