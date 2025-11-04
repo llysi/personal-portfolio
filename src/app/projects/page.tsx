@@ -1,6 +1,6 @@
 import { projects } from '@/data/projects';
-import ProjectCard from '@/components/projects/ProjectCard';
-import ProjectGrid from '@/components/projects/ProjectGrid';
+import ProjectCard from './ProjectCard';
+import ProjectGrid from './ProjectGrid';
 
 export default function ProjectsPage() {
     return (
