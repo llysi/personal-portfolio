@@ -1,4 +1,4 @@
-import { projects } from '@/data/projects';
+import { projects } from '@/app/projects/projects';
 import ProjectCard from './ProjectCard';
 import ProjectGrid from './ProjectGrid';
 
