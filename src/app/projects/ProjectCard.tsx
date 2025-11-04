@@ -17,9 +17,10 @@ export default function ProjectCard({project, className=""}: ProjectCardProps){
         <div className={`bg-card flex flex-col md:flex-row ${className}`}>
             {/* Image container - Top on mobile, Left on desktop */}
             <div
-                className="w-full md:w-96 h-60 md:h-60 flex-shrink-0 p-4"
+                className="w-full md:w-96 h-60 md:h-60 flex-shrink-0 p-4 cursor-pointer"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
+                onClick={() => setIsHovered(!isHovered)}
             >
                 <div className="relative w-full h-full bg-white overflow-hidden flex items-center justify-center shadow-md hover:shadow-lg transition-shadow">
                     {/* Base image */}
