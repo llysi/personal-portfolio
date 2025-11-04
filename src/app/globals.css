@@ -25,6 +25,31 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: 'Momo Trust Display', sans-serif;
+
+  --animate-slideDown: slideDown 0.5s ease-in-out;
+  --animate-slideUp: slideUp 0.4s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0;
+    overflow: hidden;
+  }
+  to {
+    max-height: 200px;
+    overflow: hidden;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    max-height: 200px;
+    overflow: hidden;
+  }
+  to {
+    max-height: 0;
+    overflow: hidden;
+  }
 }
 
 

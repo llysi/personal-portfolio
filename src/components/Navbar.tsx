@@ -13,11 +13,11 @@ export default function Navbar() {
   //Mobile Menu Panel [state, updater function]
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  /* 
+  /*
   //Check if a link is active
   const isActive = (href: string) => {
     return pathname === href
-  } 
+  }
   */
 
   //Toggle hamburger
@@ -70,8 +70,12 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu panel*/}
-      {isMobileMenuOpen && (
-        <div id="mobile-menu" className="md:hidden bg-background border-t border-foreground/10 absolute left-0 right-0 font-heading">
+      <div
+        id="mobile-menu"
+        className={`md:hidden bg-background border-t border-foreground/10 absolute left-0 right-0 font-heading transition-all duration-500 ease-in-out overflow-hidden ${
+          isMobileMenuOpen ? 'max-h-48' : 'max-h-0'
+        }`}
+      >
           <div className="px-4 py-2 space-y-2">
             <Link href="/projects" className={`block py-2 text-foreground hover:text-accent transition-colors`}>
             Projects
@@ -88,8 +92,7 @@ export default function Navbar() {
               Art/Extra
             </Link>
           </div>
-        </div>
-      )}      
+        </div>      
     </nav>
   )
 }
