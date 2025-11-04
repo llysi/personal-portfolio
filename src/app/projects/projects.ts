@@ -6,6 +6,7 @@ export interface Project {
     hoverImage?: string;
     technologies: string[];
     githubUrl?: string;
+    devpostUrl?: string;
     liveUrl?: string;
     featured?: boolean; //highlighting special projects
     showGithub?: boolean;
@@ -21,6 +22,7 @@ export const projects: Project[] = [
         hoverImage: "/projects/launchpad_content.png",
         technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
         githubUrl: "https://github.com/llysi/howdyhack-25",
+        devpostUrl: "https://devpost.com/software/launchpad-h6v915",
         liveUrl: "https://example.com/",
         featured: true,
         showGithub: true,
@@ -39,7 +41,7 @@ export const projects: Project[] = [
         id: "3",
         title: "Project 3",
         description: `WIP`,
-        image: "/projects/portfolio.jpg",
+        image: "/projects/tidal.png",
         technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
         githubUrl: "https://github.com/llysi/personal-portfolio",
         liveUrl: "https://alysazhao.com",

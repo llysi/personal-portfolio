@@ -7,8 +7,8 @@ export default function ProjectsPage() {
     return (
         <div className="min-h-screen pt-12 pb-52">
             <div className="max-w-5xl mx-auto px-4">
-                <div className="mb-12">
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-light font-heading text-foreground mb-2">
+                <div className="mb-10">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-light font-heading text-foreground">
                         PROJECTS
                     </h1>
                     {/*<div className="scale-75 origin-left mb--2">

@@ -53,7 +53,7 @@ export default function ProjectGrid({
     const getLayoutClasses = () => {
         switch (layout) {
             case 'single':
-                return `flex flex-col gap-16 max-w-5xl mx-auto`;
+                return `flex flex-col gap-12 max-w-5xl mx-auto`;
             case 'grid':
                 return `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6`;
             case 'masonry':
