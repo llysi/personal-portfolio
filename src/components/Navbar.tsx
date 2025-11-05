@@ -13,6 +13,7 @@ export default function Navbar() {
   //Mobile Menu Panel [state, updater function]
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [shouldAnimate, setShouldAnimate] = useState(true)
+  const [isLogoHovered, setIsLogoHovered] = useState(false)
 
   // Close menu when route changes
   useEffect(() => {
@@ -43,14 +44,31 @@ export default function Navbar() {
       <div className="px-2 h-18 flex justify-between items-center font-light">
 
         {/* Logo */}
-        <Link href="/" className = "flex items-center gap-2">
-          {<Image 
-            src = "/logo_bwt.svg"
-            alt="Alysa Zhao"
-            width={28}
-            height={28}
-          />}
-          <span className="text-lg text-foreground hover:text-accent transition-colors font-heading">
+        <Link
+          href="/"
+          className="flex items-center gap-2"
+          onMouseEnter={() => setIsLogoHovered(true)}
+          onMouseLeave={() => setIsLogoHovered(false)}
+        >
+          <div className={`relative w-7 h-7 transition-all duration-200 origin-center ${isLogoHovered ? 'scale-115 drop-shadow-[0_0_12px_rgba(255,255,255,1)]' : 'scale-100'}`}>
+            {/* Base logo */}
+            <Image
+              src="/logo_bwt.svg"
+              alt="Alysa Zhao"
+              width={28}
+              height={28}
+              className={`transition-opacity duration-300 ${isLogoHovered ? 'opacity-0' : 'opacity-100'}`}
+            />
+            {/* Hover logo */}
+            <Image
+              src="/logo_bb.svg"
+              alt="Alysa Zhao"
+              width={28}
+              height={28}
+              className={`absolute inset-0 transition-opacity duration-300 ${isLogoHovered ? 'opacity-100' : 'opacity-0'}`}
+            />
+          </div>
+          <span className={`text-lg transition-colors font-heading ${isLogoHovered ? 'text-accent' : 'text-foreground'}`}>
             ALYSA
           </span>
         </Link>
