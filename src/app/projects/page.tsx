@@ -17,6 +17,15 @@ export default function ProjectsPage() {
                 </div>
 
                 <ProjectGrid projects={projects} layout="single" />
+
+                {/* More to come indicator */}
+                <div className="flex justify-center items-center mt-16 mb-8">
+                    <div className="flex items-center gap-3 text-textcolor/60">
+                        <span className="text-2xl">✦—</span>
+                        <span className="text-sm font-medium uppercase tracking-wide">more coming soon</span>
+                        <span className="text-2xl">—✦</span>
+                    </div>
+                </div>
             </div>
         </div>
     );
