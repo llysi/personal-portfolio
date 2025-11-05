@@ -50,7 +50,7 @@ export default function Navbar() {
           onMouseEnter={() => setIsLogoHovered(true)}
           onMouseLeave={() => setIsLogoHovered(false)}
         >
-          <div className={`relative w-7 h-7 transition-all duration-200 origin-center ${isLogoHovered ? 'scale-115 drop-shadow-[0_0_12px_rgba(255,255,255,1)]' : 'scale-100'}`}>
+          <div className={`relative w-7 h-7 transition-all duration-200 origin-center ${isLogoHovered ? 'scale-110 drop-shadow-[0_0_12px_rgba(255,255,255,1)]' : 'scale-100'}`} suppressHydrationWarning>
             {/* Base logo */}
             <Image
               src="/logo_bwt.svg"
@@ -68,7 +68,7 @@ export default function Navbar() {
               className={`absolute inset-0 transition-opacity duration-300 ${isLogoHovered ? 'opacity-100' : 'opacity-0'}`}
             />
           </div>
-          <span className={`text-lg transition-colors font-heading ${isLogoHovered ? 'text-accent' : 'text-foreground'}`}>
+          <span className={`text-lg transition-colors font-heading ${isLogoHovered ? 'text-accent' : 'text-foreground'}`} suppressHydrationWarning>
             ALYSA
           </span>
         </Link>
