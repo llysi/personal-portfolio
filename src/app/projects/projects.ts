@@ -20,14 +20,14 @@ export const projects: Project[] = [
                 automated scheduling and data visualization.`,
         image: "/projects/launchpad_title.png",
         hoverImage: "/projects/launchpad_content.png",
-        technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+        technologies: ["Next.js", "Google Gemini API", "Three.js"],
         githubUrl: "https://github.com/llysi/howdyhack-25",
         devpostUrl: "https://devpost.com/software/launchpad-h6v915",
         liveUrl: "https://example.com/",
         featured: true,
         showGithub: true,
     },
-    {
+    /*{
         id: "2",
         title: "Project 2",
         description: `WIP`,
@@ -46,5 +46,5 @@ export const projects: Project[] = [
         githubUrl: "https://github.com/llysi/personal-portfolio",
         liveUrl: "https://alysazhao.com",
         featured: false
-    }
+    }*/
 ];
