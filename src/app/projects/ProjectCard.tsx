@@ -55,14 +55,24 @@ export default function ProjectCard({project, className=""}: ProjectCardProps){
                     <p className="text-textcolor text-base leading-relaxed mb-4">
                         {project.description}
                     </p>
-
-                    {/* Technology badges */}
-
-
                 </div>
 
-                {/* Links - bottom right */}
-                <div className="flex justify-end gap-3 scale-90 origin-right">
+                {/* Technology badges and Links */}
+                <div className="flex justify-between items-center gap-4">
+                    {/* Technology badges - left side */}
+                    <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech, index) => (
+                            <span
+                                key={index}
+                                className="px-3 py-1 border border-textcolor text-textcolor rounded-full text-sm font-medium"
+                            >
+                                {tech}
+                            </span>
+                        ))}
+                    </div>
+
+                    {/* Links - right side */}
+                    <div className="flex gap-3 scale-90 origin-right flex-shrink-0">
                     {/* GitHub link */}
                     {project.githubUrl && project.showGithub && (
                         <a
@@ -91,6 +101,7 @@ export default function ProjectCard({project, className=""}: ProjectCardProps){
                             </svg>
                         </a>
                     )}
+                </div>
                 </div>
             </div>
         </div>
