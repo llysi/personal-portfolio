@@ -3,7 +3,7 @@ import RotatingText from './RotatingText'
 
 export default function Hero() {
     return (
-        <section className="flex items-start justify-start pt-32 px-4" style={{ minHeight: 'calc(100vh - 128px)' }}>
+        <section className="flex items-start justify-start pt-28 px-4" style={{ minHeight: 'calc(100vh - 128px)' }}>
         {/* TODO: Add background gradient */}
 
         <div className="text-left space-y-8 w-full">
