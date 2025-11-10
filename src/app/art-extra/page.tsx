@@ -52,22 +52,22 @@ const artPieces: ArtPiece[] = [
     },
     {
         id: "8",
-        image: "/art/a8.png",
+        image: "/art/a10.jpg",
         title: "Art Piece 8",
-        order: 9
+        order: 8
     },
     {
         id: "9",
-        image: "/art/a10.jpg",
-        title: "Art Piece 10",
-        order: 8
+        image: "/art/a8.png",
+        title: "Art Piece 9",
+        order: 9
     },
-    /*{
+    {
         id: "10",
-        image: "/art/a10.jpg",
+        image: "/art/conveyor.gif",
         title: "Art Piece 10",
         order: 10
-    }*/
+    }
 
     // Add more art pieces here
 ];
