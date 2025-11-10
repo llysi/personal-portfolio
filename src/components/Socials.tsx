@@ -11,7 +11,7 @@ export default function Socials(){
 
             {/* Email Icon*/}
             <a
-                href="/contact" rel="noopener noreferrer"
+                href="mailto:alysazhao111@tamu.edu" rel="noopener noreferrer"
                 className="pr-3 rounded-full border-0 border-foreground/20 text-foregroundhue text-lg
                 font-semibold hover:text-accent hover:border-accent transition-colors"
             >
