@@ -80,7 +80,7 @@ export default function Navbar() {
             className={`text-foreground hover:text-accent transition-colors`}>
             PROJECTS
           </Link>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
+          <a href="/Alysa_Zhao_Resume.pdf" target="_blank" rel="noopener noreferrer"
             className={`text-foreground hover:text-accent transition-colors`}>
             RESUME
           </a>
